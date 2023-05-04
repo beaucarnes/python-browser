@@ -30,11 +30,6 @@ function print(...args) {
   term.writeln(`>>> ${text}`);
 }
 
-
-function sleep(ms){
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 const createInputFunction = () => {
   return async function input(text) {
     return new Promise((resolve) => {
@@ -161,7 +156,6 @@ runButton.addEventListener('click', async () => {
   
   const modifiedCode = `
 import js
-from js import sleep
 from js import print
 from js import input
 ` + modifiedLines.join('\n');
